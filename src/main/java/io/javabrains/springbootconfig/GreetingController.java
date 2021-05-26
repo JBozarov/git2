@@ -28,6 +28,9 @@ public class GreetingController {
     @Value("#{${my.db.mapValues}}") // pay attention to this line
     private Map<String, String> myDbValues;
 
+    @Value("${my.list.values}")
+    private List<String> DbSettings;
+
     @GetMapping("/greeting")
     public String greeting() {
         System.out.println(appDescription);
