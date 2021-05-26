@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
+import java.util.Map;
 
 @RestController
 public class GreetingController {
@@ -24,10 +25,14 @@ public class GreetingController {
     @Value("${my.list.values}")
     private List<String> listOfValues;
 
+    @Value("#{${my.db.values}}") // pay attention to this line
+    private Map<String, String> myDbValues;
+
     @GetMapping("/greeting")
     public String greeting() {
         System.out.println(appDescription);
         System.out.println(listOfValues);
-        return greetingMessage +" " + staticValue +" "+ defaultValue;
+        System.out.println();
+        return greetingMessage +" " + staticValue +" "+ defaultValue + " " + myDbValues;
     }
 }
