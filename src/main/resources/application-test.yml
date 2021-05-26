@@ -10,10 +10,8 @@ my:
     mapValues: "{connectionUrl:'http://skdfsl/sdkf', userName: 'foo', pasword: 'pass'}"
 
 db:
-  connection: "{connectionUrl:'http://skdfsl/sdkf', userName: 'foo', pasword: 'pass'}"
+  connection: "test-connection-string"
   host: 127.0.0.1
-  port: 1200
+  port: 2400
 
 management.endpoints.web.exposure.include: "*"
-
-spring.profiles.active: test
