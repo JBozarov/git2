@@ -25,7 +25,7 @@ public class GreetingController {
     @Value("${my.list.values}")
     private List<String> listOfValues;
 
-    @Value("#{${my.db.values}}") // pay attention to this line
+    @Value("#{${my.db.mapValues}}") // pay attention to this line
     private Map<String, String> myDbValues;
 
     @GetMapping("/greeting")
