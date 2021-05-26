@@ -10,8 +10,12 @@ public class GreetingController {
     @Value("${my.greeting}")
     private String greetingMessage;
 
+    @Value("${app.description}")
+    private String appDescription;
+
     @GetMapping("/greeting")
     public String greeting() {
+        System.out.println(appDescription);
         return greetingMessage;
     }
 }
