@@ -13,9 +13,12 @@ public class GreetingController {
     @Value("${app.description}")
     private String appDescription;
 
+    @Value("passing static value")
+    private String staticValue;
+
     @GetMapping("/greeting")
     public String greeting() {
         System.out.println(appDescription);
-        return greetingMessage;
+        return greetingMessage + staticValue;
     }
 }
