@@ -1,12 +1,17 @@
 my.greeting: Hello
-app.name: My applic
-app.description: Welcome to ${app.name}
+app:
+  name: My applic
+  description: Welcome to ${app.name}
 
-my.list.values: One,Two,Three
-my.db.mapValues: {connectionUrl:'http://skdfsl/sdkf', userName: 'foo', pasword: 'pass'}
+my:
+  list:
+    values: One,Two,Three
+  db:
+    mapValues: "{connectionUrl:'http://skdfsl/sdkf', userName: 'foo', pasword: 'pass'}"
 
-db.connection: {connectionUrl:'http://skdfsl/sdkf', userName: 'foo', pasword: 'pass'}
-db.host: 127.0.0.1
-db.port: 1200
+db:
+  connection: "{connectionUrl:'http://skdfsl/sdkf', userName: 'foo', pasword: 'pass'}"
+  host: 127.0.0.1
+  port: 1200
 
-management.endpoints.web.exposure.include: *
+management.endpoints.web.exposure.include: "*"
