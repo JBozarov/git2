@@ -16,9 +16,12 @@ public class GreetingController {
     @Value("passing static value")
     private String staticValue;
 
+    @Value("${my.notExistingProp: default: Some Default Value}")
+    private String defaultValue;
+
     @GetMapping("/greeting")
     public String greeting() {
         System.out.println(appDescription);
-        return greetingMessage + staticValue;
+        return greetingMessage +" " + staticValue +" "+ defaultValue;
     }
 }
