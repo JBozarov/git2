@@ -9,9 +9,9 @@ my:
   db:
     mapValues: "{connectionUrl:'http://skdfsl/sdkf', userName: 'foo', pasword: 'pass'}"
 
-db:
-  connection: "test-connection-string"
-  host: 127.0.0.1
-  port: 2400
+#db:
+#  connection: "test-connection-string"
+#  host: 127.0.0.1
+#  port: 2400
 
 management.endpoints.web.exposure.include: "*"

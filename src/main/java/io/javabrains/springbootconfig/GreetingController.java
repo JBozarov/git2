@@ -2,6 +2,8 @@ package io.javabrains.springbootconfig;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.core.env.Environment;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -11,6 +13,8 @@ import java.util.Map;
 
 // we can run any profile using @Profile("test") annotation as well
 @RestController
+@EnableAutoConfiguration
+@Configuration
 public class GreetingController {
 
     @Value("${my.greeting}")

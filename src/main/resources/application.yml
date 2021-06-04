@@ -7,13 +7,16 @@ my:
   list:
     values: One,Two,Three
   db:
-    mapValues: "{connectionUrl:'http://skdfsl/sdkf', userName: 'foo', pasword: 'pass'}"
+    mapValues: "this is application.yml connection"
 
-db:
-  connection: "{connectionUrl:'http://skdfsl/sdkf', userName: 'foo', pasword: 'pass'}"
-  host: 127.0.0.1
-  port: 1200
+#db:
+#  connection: "application connection string"
+#  host: 127.0.0.1
+#  port: 1200
 
+spring.application.name: sprint
 management.endpoints.web.exposure.include: "*"
 
 spring.profiles.active: test
+
+spring.cloud.config.uri: http://localhost:8888
